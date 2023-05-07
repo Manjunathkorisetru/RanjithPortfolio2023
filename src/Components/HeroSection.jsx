@@ -15,8 +15,8 @@ function HeroSection() {
   ];
 
   return (
-    <div className="flex flex-col justify-center border-2 border-gray-500 border-opacity-50 rounded-lg h-auto">
-      <div className="bg-[#F5F5F5] flex flex-col items-center justify-center h-[600px]">
+    <div className="flex flex-col justify-center border-2 border-gray-500 border-opacity-50 rounded-lg h-auto ">
+      <div className="flex flex-col items-center justify-center h-[600px]">
         <div className="bg-[#464646] flex flex-col items-center justify-center shadow-2xl rounded-2xl w-full lg:max-w-[1200px] md:max-w-[500px] sm:max-w-[500px] mx-auto">
           <div className="w-48 h-48 mt-10 rounded-full overflow-hidden shadow-2xl">
             <img
@@ -41,7 +41,7 @@ function HeroSection() {
 
           <div className="flex flex-row mt-1 mb-10 gap-4">
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/ranjith-krishnamurthy-67a600103/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5c5b5b] flex items-center justify-center text-white font-semibold w-12 h-12 px-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300"
@@ -49,7 +49,7 @@ function HeroSection() {
               <FontAwesomeIcon icon={faLinkedinIn} size="xl" />
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://github.com/ranjithkris"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5c5b5b] flex items-center justify-center text-white font-semibold w-12 h-12 px-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300"
@@ -58,7 +58,7 @@ function HeroSection() {
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://github.com/ranjithkris"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#5c5b5b] flex items-center justify-center text-white font-semibold w-12 h-12 px-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300"
@@ -76,8 +76,12 @@ function HeroSection() {
           <Link to="education" smooth={true} duration={500}>
             <NavButtons buttonText="Education" />
           </Link>
-          <NavButtons buttonText="Publications" />
-          <NavButtons buttonText="Projects" />
+          <Link to="publications" smooth={true} duration={500}>
+            <NavButtons buttonText="Publications" />
+          </Link>
+          <Link to="projects" smooth={true} duration={500}>
+            <NavButtons buttonText="Projects" />
+          </Link>
           <NavButtons buttonText="Teaching" />
           <NavButtons buttonText="Tools & Technologies" />
           <NavButtons buttonText="Interests" />
@@ -101,13 +105,49 @@ function HeroSection() {
           items={experienceList}
         />
       </div>
-
       <div className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10">
         <h1
           id="education"
           className="font-bold text-4xl text-white  text-left mt-10 ml-20"
         >
           Education
+        </h1>
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+      </div>
+
+      <div
+        id="publications"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+      >
+        <h1 className="font-bold text-4xl text-white  text-left mt-10 ml-20">
+          Publications
+        </h1>
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+      </div>
+      <div
+        id="projects"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+      >
+        <h1 className="font-bold text-4xl text-white  text-left mt-10 ml-20">
+          Projects
         </h1>
         <ContentSection
           sectionName="Heinz Nixdorf Institute – University of Paderborn"
