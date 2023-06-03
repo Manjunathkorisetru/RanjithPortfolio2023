@@ -4,8 +4,11 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import NavButtons from "./NavButtons";
 import ContentSection from "./ContentSection";
 import { Link } from "react-scroll";
+//import { useState } from "react";
 
 function HeroSection() {
+  /*   const [highlight, setHighlight] = useState("");
+  console.log(highlight); */
   const experienceList = [
     "Working on the project Model-based development of digital twins for cyber-physical production systems",
     "Ranjith",
@@ -13,16 +16,19 @@ function HeroSection() {
     "Research Associate at Fraunhofer IEM Paderborn",
     "lorum ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   ];
+  /*   const handleHighlight = (to) => {
+    setHighlight(to);
+  }; */
 
   return (
-    <div className="flex flex-col justify-center border-2 border-gray-500 border-opacity-50 rounded-lg h-auto ">
-      <div className="flex flex-col items-center justify-center h-[600px]">
-        <div className="bg-[#464646] flex flex-col items-center justify-center shadow-2xl rounded-2xl w-full lg:max-w-[1200px] md:max-w-[500px] sm:max-w-[500px] mx-auto">
+    <div className="flex flex-col justify-center rounded-lg h-auto mb-60 ">
+      <div className="flex flex-col items-center justify-center h-[600px] mt-20">
+        <div className="bg-[#464646] flex flex-col items-center justify-center shadow-2xl rounded-2xl w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px] mx-auto">
           <div className="w-48 h-48 mt-10 rounded-full overflow-hidden shadow-2xl">
             <img
               src={Ranjith}
               alt="Profile Picture"
-              className="object-cover w-full h-full"
+              className="w-full h-full object-cover"
             />
           </div>
 
@@ -68,30 +74,67 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <header className="bg-[#464646] h-[70px] w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] flex flex-col items-center justify-center rounded-lg mx-auto shadow-2xl">
-        <nav className="flex items-center justify-center gap-10 container mx-auto px-4 py-2 shadow-2xl ">
-          <Link to="experience" smooth={true} duration={500}>
+
+      <header className="bg-[#000000] h-[70px] sm:w-screen sm:overflow-x-auto md:w-screen md:overflow-x-auto lg:w-full lg:overflow-x-auto xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px] flex items-center justify-center rounded-lg mx-auto shadow-2xl fixed top-0 left-0 right-0 z-50 mt-2 scrollbar scrollbar-thin scrollbar-thumb-gray-600">
+        <nav className="flex gap-10 container rounded-lg px-4 py-2 shadow-2xl xl:justify-center">
+          <Link
+            activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
+            to="experience"
+            smooth={true}
+            duration={500}
+            spy={true}
+          >
             <NavButtons buttonText="Experience" />
           </Link>
-          <Link to="education" smooth={true} duration={500}>
+          <Link
+            to="education"
+            activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <NavButtons buttonText="Education" />
           </Link>
-          <Link to="publications" smooth={true} duration={500}>
+          <Link
+            to="publications"
+            activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <NavButtons buttonText="Publications" />
           </Link>
-          <Link to="projects" smooth={true} duration={500}>
+          <Link
+            to="projects"
+            activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             <NavButtons buttonText="Projects" />
           </Link>
-          <NavButtons buttonText="Teaching" />
-          <NavButtons buttonText="Tools & Technologies" />
+          <Link
+            to="teaching"
+            activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <NavButtons buttonText="Teaching" />
+          </Link>
+          <NavButtons buttonText="Technologies" />
           <NavButtons buttonText="Interests" />
         </nav>
       </header>
+
       <div
         id="experience"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
       >
-        <h1 className="font-bold text-4xl text-white  text-left mt-10 ml-20">
+        <h1
+          className="
+         font-bold text-4xl text-white  text-left mt-20 ml-20"
+        >
           Experience
         </h1>
         <ContentSection
@@ -105,11 +148,11 @@ function HeroSection() {
           items={experienceList}
         />
       </div>
-      <div className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10">
-        <h1
-          id="education"
-          className="font-bold text-4xl text-white  text-left mt-10 ml-20"
-        >
+      <div
+        id="education"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+      >
+        <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Education
         </h1>
         <ContentSection
@@ -126,9 +169,9 @@ function HeroSection() {
 
       <div
         id="publications"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
       >
-        <h1 className="font-bold text-4xl text-white  text-left mt-10 ml-20">
+        <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Publications
         </h1>
         <ContentSection
@@ -144,10 +187,29 @@ function HeroSection() {
       </div>
       <div
         id="projects"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[500px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
       >
-        <h1 className="font-bold text-4xl text-white  text-left mt-10 ml-20">
+        <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Projects
+        </h1>
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+        <ContentSection
+          sectionName="Heinz Nixdorf Institute – University of Paderborn"
+          sectionSubName="Research Associate and Ph.D. Candidate – September 2020 - Current"
+          items={experienceList}
+        />
+      </div>
+
+      <div
+        id="teaching"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+      >
+        <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
+          Teaching
         </h1>
         <ContentSection
           sectionName="Heinz Nixdorf Institute – University of Paderborn"
