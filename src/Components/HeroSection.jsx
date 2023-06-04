@@ -23,7 +23,7 @@ function HeroSection() {
   return (
     <div className="flex flex-col justify-center rounded-lg h-auto mb-60 ">
       <div className="flex flex-col items-center justify-center h-[600px] mt-20">
-        <div className="bg-[#464646] flex flex-col items-center justify-center shadow-2xl rounded-2xl w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px] mx-auto">
+        <div className="bg-[#464646] flex flex-col items-center justify-center shadow-2xl rounded-2xl w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px] max-[640px]: max-w-[450px] mx-auto">
           <div className="w-48 h-48 mt-10 rounded-full overflow-hidden shadow-2xl">
             <img
               src={Ranjith}
@@ -75,7 +75,7 @@ function HeroSection() {
         </div>
       </div>
 
-      <header className="bg-[#000000] h-[70px] sm:w-screen sm:overflow-x-auto md:w-screen md:overflow-x-auto lg:w-full lg:overflow-x-auto xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px] flex items-center justify-center rounded-lg mx-auto shadow-2xl fixed top-0 left-0 right-0 z-50 mt-2 scrollbar scrollbar-thin scrollbar-thumb-gray-600">
+      <header className="bg-[#000000] h-[70px] sm:w-screen sm:overflow-x-auto md:w-screen md:overflow-x-auto lg:w-full lg:overflow-x-auto xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px] sm:max-w-[500px]  max-[640px]:max-w-[450px] max-[640px]:w-screen max-[640px]:overflow-x-auto max-[640px]:ml-[90px] flex items-center justify-center rounded-lg mx-auto shadow-2xl fixed top-0 left-0 right-0 z-50 mt-2 scrollbar scrollbar-thin scrollbar-thumb-gray-600">
         <nav className="flex gap-10 container rounded-lg px-4 py-2 shadow-2xl xl:justify-center">
           <Link
             activeClass="bg-[#5c5b5b] shadow-2xl rounded-lg"
@@ -129,7 +129,7 @@ function HeroSection() {
 
       <div
         id="experience"
-        className="bg-[#464646] h-auto py-8 w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full xl:max-w-[1200px] lg:max-w-[1000px] md:max-w-[700px]  sm:max-w-[500px]  max-[640px]:max-w-[450px] rounded-lg mx-auto shadow-2xl mt-10"
       >
         <h1
           className="
@@ -150,7 +150,7 @@ function HeroSection() {
       </div>
       <div
         id="education"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] max-[640px]:max-w-[450px] rounded-lg mx-auto shadow-2xl mt-10"
       >
         <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Education
@@ -169,7 +169,7 @@ function HeroSection() {
 
       <div
         id="publications"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] max-[640px]:max-w-[450px] rounded-lg mx-auto shadow-2xl mt-10"
       >
         <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Publications
@@ -187,7 +187,7 @@ function HeroSection() {
       </div>
       <div
         id="projects"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px]  max-[640px]:max-w-[450px] rounded-lg mx-auto shadow-2xl mt-10"
       >
         <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Projects
@@ -206,7 +206,7 @@ function HeroSection() {
 
       <div
         id="teaching"
-        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] rounded-lg mx-auto shadow-2xl mt-10"
+        className="bg-[#464646] h-auto py-8 w-full lg:max-w-[1200px] md:max-w-[700px]  sm:max-w-[500px] max-[640px]:max-w-[450px] rounded-lg mx-auto shadow-2xl mt-10"
       >
         <h1 className="font-bold text-4xl text-white  text-left mt-20 ml-20">
           Teaching
